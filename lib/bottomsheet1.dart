@@ -65,9 +65,50 @@ class _BottomSheetDemo1State extends State<BottomSheetDemo1> {
                 style: TextStyle(color: Colors.white),
               ),
             ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () => _show(context),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.deepPurpleAccent,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+
+              child: const Text(
+                "Bottom Sheet 3",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
           ],
         ),
       ),
+    );
+  }
+
+  void _show(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.amber.shade300,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (_) {
+        return Container(
+          height: 250,
+          child: Column(
+            mainAxisAlignment: .center,
+            children: const [
+              Center(
+                child: Text(
+                  'Breathe in... Breathe out...',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }
