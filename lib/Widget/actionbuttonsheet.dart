@@ -14,31 +14,25 @@ class _ActionButtonsSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(25),
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
-      child: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _ActionButton(text: "Edit Post", color: Colors.blue, onTap: () {}),
-            const SizedBox(height: 12),
-            _ActionButton(
-              text: "Delete Story",
-              color: Colors.red,
-              onTap: () {},
-            ),
-            const SizedBox(height: 12),
-            _ActionButton(
-              text: "Cancel",
-              color: Colors.grey.shade300,
-              textColor: Colors.black,
-              onTap: () => Navigator.pop(context),
-            ),
-          ],
-        ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _ActionButton(text: "Edit Post", color: Colors.blue, onTap: () {}),
+          const SizedBox(height: 12),
+          _ActionButton(text: "Delete Story", color: Colors.red, onTap: () {}),
+          const SizedBox(height: 12),
+          _ActionButton(
+            text: "Cancel",
+            color: Colors.grey.shade300,
+            textColor: Colors.black,
+            onTap: () => Navigator.pop(context),
+          ),
+        ],
       ),
     );
   }

@@ -14,16 +14,13 @@ class _OptionsSheet extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
-      child: SafeArea(
-        child: Column(
-          mainAxisSize: .min,
-          children: [
-            _sheetTile(icon: Icons.share, title: "share"),
-            _sheetTile(icon: Icons.link, title: "Get Link"),
-            _sheetTile(icon: Icons.edit, title: "Edit"),
-            _sheetTile(icon: Icons.delete_outline, title: "Delete"),
-          ],
-        ),
+      child: Column(
+        children: [
+          _sheetTile(icon: Icons.share, title: "share"),
+          _sheetTile(icon: Icons.link, title: "Get Link"),
+          _sheetTile(icon: Icons.edit, title: "Edit"),
+          _sheetTile(icon: Icons.delete_outline, title: "Delete"),
+        ],
       ),
     );
   }
